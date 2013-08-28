@@ -16,7 +16,7 @@
 <div class="wrapper content-wrapper">
 	<div class="content">
 		<ol class="post-list">
-			{% for post in site.posts offset:10 limit:10 %}
+			{% for post in site.posts %}
 			<li>
 				<h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 				<div class="base-info">
