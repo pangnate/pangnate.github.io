@@ -31,7 +31,11 @@
 					<a rel="nofollow" class="comment-count" href="{{ site.baseurl }}{{ post.url }}#comment">0评</a>
 				</div>
 				<div class="summary">
-					{{ post.thumb }}
+					{% if post.thumb %}
+					<div class="thumb">
+						<img src="{{ site.baseurl }}{{ post.thumb }}" alt="">
+					</div>
+					{% endif %}
 					{{ post.excerpt }}
 					<a rel="nofollow" href="{{ site.baseurl }}{{ post.url }}">Read...</a>
 				</div>
