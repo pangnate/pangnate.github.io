@@ -20,14 +20,14 @@
 			<li>
 				<h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 				<div class="base-info">
-					<span class="author">By: <strong>胖纳特</strong></span>
+					<span class="author">By: <strong>{{ site.author }}</strong></span>
 					<span class="category">
 						Category:
 						{% for category in post.categories %}
 						<a href="{{ site.baseurl }}/category/{{ category }}">{{ category }}</a>
 						{% endfor %}
 					</span>
-					<span class="post-date">Date: {{ post.date }}</span>
+					<span class="post-date">Date: {{ post.date | date: "%Y/%m/%d" }}</span>
 					<a rel="nofollow" class="comment-count" href="{{ site.baseurl }}{{ post.url }}#comment">0评</a>
 				</div>
 				{% if post.cover %}
