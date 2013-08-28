@@ -4,6 +4,7 @@ title: 欢迎使用 MarkdownPad 2
 categories: [Markdown, "中文分类"]
 tags: [jekyll, github, git, markdown]
 excerpt: '## 欢迎使用 MarkdownPad 2 ##'
+cover : '/images/ku-bigpic.jpg'
 ---
 ## 欢迎使用 MarkdownPad 2 ##
 
