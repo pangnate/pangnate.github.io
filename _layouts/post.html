@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>{{ page.title }}</title>
+	<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon"/>
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/github.css">
+</head>
+<body>
+
+{% include g-nav.html %}
+
+<div class="top-blank"></div>
+<div class="wrapper content-wrapper">
+	<div class="content">
+		<div class="post-wrapper">
+			<h1>{{ page.title }}</h1>
+			<div class="base-info">
+				<span class="author">By: <strong>胖纳特</strong></span>
+				<span class="category">Category: <a href="#">文章分类</a></span>
+				<span class="post-date">Date: {{ page.date }}</span>
+				<span><a rel="nofollow" class="comment-count" href="#comment">0评</a></span>
+			</div>
+			<div class="post-content" id="post">
+				{{ page.content }}
+			</div>
+		</div>
+		<div class="simple-nav">
+			<a href="{{ paginator.previous_page_path }}">&lt;</a>
+			<a href="{{ paginator.next_page_path }}">&gt;</a>
+		</div>
+		<div class="comment">
+			<a name="comment"></a>
+			<div id="uyan_frame"></div>
+		</div>
+	</div>
+	<div class="sidebar">
+		<div class="block"></div>
+	</div>
+</div>
+
+
+{% include footer.html %}
+
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=95170"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>{{ page.title }}</title>
+	<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon"/>
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+</head>
+<body>
+
+{% include g-nav.html %}
+
+<div class="top-blank"></div>
+<div class="wrapper content-wrapper">
+	<div class="content">
+		<ol class="post-list">
+			{% for post in site.posts offset:10 limit:10 %}
+			<li>
+				<h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+				<div class="base-info">
+					<span class="author">By: <strong>胖纳特</strong></span>
+					<span class="category">
+						Category:
+						{% for category in post.categories %}
+						<a href="{{ site.baseurl }}/category/{{ category }}">{{ category }}</a>
+						{% endfor %}
+					</span>
+					<span class="post-date">Date: {{ post.date }}</span>
+					<a rel="nofollow" class="comment-count" href="{{ site.baseurl }}{{ post.url }}#comment">0评</a>
+				</div>
+				<div class="summary">
+					{{ post.excerpt }}
+					<a rel="nofollow" href="{{ site.baseurl }}{{ post.url }}">Read...</a>
+				</div>
+				<div class="tags">
+					<span>Tags:</span>
+					{% for tag in post.tags %}
+					<span><a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a></span>
+					{% endfor %}
+				</div>
+			</li>
+			{% endfor %}
+		</ol>
+	</div>
+	<div class="sidebar">
+		<div class="block"></div>
+	</div>
+</div>
+
+
+{% include footer.html %}
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=95170"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+/**
+ * Created with Moqisoft.
+ * Date: 13-8-28
+ * Time: 上午10:09
+ */
+
+@charset "utf-8";
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body, button, input, select, textarea {
+    font: 12px/1.5 arial, tahoma, \5b8b\4f53;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    min-height: 600px;
+    background: #F5F5F5;
+	color:#333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+em, i {
+    font-style: normal;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+ul, ol, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+	color:#709602;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.wrapper {
+    width: 990px;
+    margin: 0 auto;
+	zoom: 1;
+}
+
+body, .g-nav, .g-footer{min-width:990px;}.wrapper:after {	content: ".";	display: block;	height: 0;	clear: both;	visibility: hidden;
+}
+
+.g-nav{position:fixed;left:0;top:0;z-index:5000;width:100%;height:50px;background:#FFF;background:rgba(255,255,255,0.8);border-bottom:1px solid #DDD;box-shadow:0 2px 5px #DDD;}
+.top-blank{height:50px;clear:both;}
+.content-wrapper{width:690px;padding-left:300px;}
+.content-wrapper .content{float:right;width:100%;overflow:hidden;}
+.sidebar{position:fixed;float:left;width:300px;margin-left:-300px;}
+.block{width:100%;height:200px;background:#DDD;}
+
+/* 列表 */
+.post-list, .comment, .post-wrapper{margin:0 0 0 20px;}
+.post-list li{position:relative;padding:15px 0;border-top:1px solid #DDD;}
+.post-list li h1{width:85%;height:1.2em;margin:5px 0;font:18px/1.2em "Microsoft YaHei";word-break:break-all;word-wrap:break-word;overflow:hidden;}
+.base-info, .tags{padding:0 0 5px;color:#999;}
+.tags{padding:10px 0 0;margin-right:50px;height:18px;overflow:hidden;}
+.tags span{display:inline-block;padding-right: 5px;}
+.base-info .comment-count{
+	position:absolute;right:0;top:20px;display:inline-block;padding:0 10px;height:24px;
+	line-height:24px;text-align:center;color:#FFF;
+	border-radius:12px;
+}
+.base-info span{display:inline-block;padding-right:10px;}
+.author strong{font-weight:normal;color:#709602;}
+.post-list img, .post-content img{display:block;max-width:100%;margin-bottom:5px;}
+.post-list .summary{font:12px/1.6em Arial,"SimSun";padding-top:5px;}
+.post-list .summary .thumb{float:left;margin:5px 18px 0 0;}
+.post-list .summary .thumb img{max-width:160px;margin-bottom:0;}
+
+/* 详情 */
+.post-wrapper{position:relative;padding:30px 0 15px 0;}
+.post-wrapper h1{font:18px/1.2em "Microsoft YaHei";word-break:break-all;word-wrap:break-word;color:#709602;margin-bottom:10px;}
+.post-content{width:100%;padding-top:10px;overflow:hidden;font-size:14px;border-top:1px solid #CCC;}
+.simple-nav{height:40px;margin: 10px 0 10px 20px;padding:20px 0;}
+.simple-nav a{
+	display:block;float:left;margin-right:10px;width:40px;height: 40px;
+	text-align:center;font:24px/40px "Consolas";color:#FFF;
+	background:#BBB;
+}
+.simple-nav a:hover{
+	text-decoration:none;
+}
+
+.post-list .base-info .comment-count, .simple-nav a:hover{background: #9AD410;}
+
+.post-wrapper .base-info .comment-count{position:static;height:18px;line-height:18px;padding:0;color:inherit;}
+
+
+
