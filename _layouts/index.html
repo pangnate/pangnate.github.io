@@ -30,7 +30,12 @@
 					<span class="post-date">Date: {{ post.date }}</span>
 					<a rel="nofollow" class="comment-count" href="{{ site.baseurl }}{{ post.url }}#comment">0评</a>
 				</div>
-				<div class="summary">
+				{% if post.cover %}
+				<div class="cover">
+					<img src="{{ site.baseurl }}{{ post.cover }}" alt="">
+				</div>
+				{% endif %}
+				<div class="summary clearfix">
 					{% if post.thumb %}
 					<div class="thumb">
 						<img src="{{ site.baseurl }}{{ post.thumb }}" alt="">
