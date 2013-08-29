@@ -119,13 +119,16 @@ body, .g-nav, .g-footer{min-width:990px;}.wrapper:after {	content: ".";	display:
 .post-wrapper h1{font:18px/1.2em "Microsoft YaHei";word-break:break-all;word-wrap:break-word;color:#709602;margin-bottom:10px;}
 .post-content{width:100%;padding-top:10px;overflow:hidden;font-size:14px;border-top:1px solid #CCC;}
 .simple-nav{height:40px;margin: 10px 0 10px 20px;padding:20px 0;}
-.simple-nav a{
+.simple-nav a, .simple-nav span{
 	display:block;float:left;margin-right:10px;width:40px;height: 40px;
 	text-align:center;font:24px/40px "Consolas";color:#FFF;
 	background:#BBB;
 }
 .simple-nav a:hover{
 	text-decoration:none;
+}
+.simple-nav span{
+	background:#DDD;
 }
 
 .post-list .base-info .comment-count, .simple-nav a:hover{background: #9AD410;}
