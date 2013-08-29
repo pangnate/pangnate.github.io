@@ -29,15 +29,15 @@
 			</div>
 		</div>
 		<div class="simple-nav">
-			{% if page.previous %}
-			<a title="{{ page.previous.title }}" href="{{ site.baseurl }}{{ page.previous.url }}">&lt;</a>
-			{% else %}
-			<span>&lt;</span>
-			{% endif %}
 			{% if page.next %}
-			<a title="{{ page.next.title }}" href="{{ site.baseurl }}{{ page.next.url }}">&gt;</a>
+			<a title="新一篇：{{ page.next.title }}" href="{{ site.baseurl }}{{ page.next.url }}">&gt;</a>
 			{% else %}
 			<span>&gt;</span>
+			{% endif %}
+			{% if page.previous %}
+			<a title="旧一篇：{{ page.previous.title }}" href="{{ site.baseurl }}{{ page.previous.url }}">&lt;</a>
+			{% else %}
+			<span>&lt;</span>
 			{% endif %}
 		</div>
 		<div class="comment">
