@@ -29,8 +29,8 @@
 			</div>
 		</div>
 		<div class="simple-nav">
-			<a href="{{ page.previous }}">&lt;</a>
-			<a href="{{ page.next }}">&gt;</a>
+			<a title="上一篇：{{ page.prev.title }}" href="{{ site.baseurl }}{{ page.prev.url }}">&lt;</a>
+			<a title="下一篇：{{ page.next.title }}" href="{{ site.baseurl }}{{ page.next.url }}">&gt;</a>
 		</div>
 		<div class="comment">
 			<a name="comment"></a>
