@@ -29,8 +29,16 @@
 			</div>
 		</div>
 		<div class="simple-nav">
-			<a title="{{ page.prev.title }}" href="{{ site.baseurl }}{{ page.prev.url }}">&lt;</a>
+			{% if page.previous %}
+			<a title="{{ page.previous.title }}" href="{{ site.baseurl }}{{ page.previous.url }}">&lt;</a>
+			{% else %}
+			<span>&lt;</span>
+			{% endif %}
+			{% if page.next %}
 			<a title="{{ page.next.title }}" href="{{ site.baseurl }}{{ page.next.url }}">&gt;</a>
+			{% else %}
+			<span>&gt;</span>
+			{% endif %}
 		</div>
 		<div class="comment">
 			<a name="comment"></a>
@@ -41,9 +49,11 @@
 		<div class="block"></div>
 	</div>
 </div>
-<pre>
 {{ page }}
-</pre>
+<hr>
+{{ page.previous }}
+<hr>
+{{ page.next }}
 {% include footer.html %}
 
 <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=95170"></script>
