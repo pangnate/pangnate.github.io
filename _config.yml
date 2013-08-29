@@ -1,4 +1,4 @@
-baseurl: "http://pangnate.github.io"
+baseurl: "http://pangnate.com"
 permalink: "/:year/:month/:day/:title"
 paginate_path: "/page/:num"
 timezone: "Asia/Shanghai"

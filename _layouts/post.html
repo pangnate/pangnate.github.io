@@ -20,15 +20,22 @@
 			<h1>{{ page.title }}</h1>
 			<div class="base-info">
 				<span class="author">By: <strong>{{ site.author }}</strong></span>
-				<span class="category">Category: <a href="#">文章分类</a></span>
+				{% if page.categories %}
+				<span class="category">
+					Category:
+					{% for category in page.categories %}
+					<a href="{{ site.baseurl }}/category/{{ category }}">{{ category }}</a>
+					{% endfor %}
+				</span>
+				{% endif %}
 				<span class="post-date">Date: {{ page.date | date: "%Y/%m/%d" }}</span>
-				<span><a rel="nofollow" class="comment-count" href="#comment">0评</a></span>
 			</div>
 			<div class="post-content" id="post">
-				{{ page.content }}
+				{{ page.content | markdownify }}
 			</div>
 		</div>
 		<div class="simple-nav">
+			<a name="comment" style="display:none;"></a>
 			{% if page.next %}
 			<a title="新一篇：{{ page.next.title }}" href="{{ site.baseurl }}{{ page.next.url }}">&lt;</a>
 			{% else %}
@@ -41,7 +48,6 @@
 			{% endif %}
 		</div>
 		<div class="comment">
-			<a name="comment"></a>
 			<div id="uyan_frame"></div>
 		</div>
 	</div>
@@ -50,11 +56,6 @@
 	</div>
 </div>
 
-<script type="text/javascript">
-	var uyan_config = {
-		"url" : "{{ site.baseurl }}{{ page.url }}/"
-	};
-</script>
 {% include footer.html %}
 
 </body>
