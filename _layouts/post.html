@@ -21,7 +21,7 @@
 			<div class="base-info">
 				<span class="author">By: <strong>{{ site.author }}</strong></span>
 				<span class="category">Category: <a href="#">文章分类</a></span>
-				<span class="post-date">Date: {{ page.date }}</span>
+				<span class="post-date">Date: {{ page.date | date: "%Y/%m/%d" }}</span>
 				<span><a rel="nofollow" class="comment-count" href="#comment">0评</a></span>
 			</div>
 			<div class="post-content" id="post">
@@ -29,8 +29,8 @@
 			</div>
 		</div>
 		<div class="simple-nav">
-			<a href="{{ paginator.previous_page_path }}">&lt;</a>
-			<a href="{{ paginator.next_page_path }}">&gt;</a>
+			<a href="{{ page.previous }}">&lt;</a>
+			<a href="{{ page.next }}">&gt;</a>
 		</div>
 		<div class="comment">
 			<a name="comment"></a>
