@@ -35,7 +35,6 @@
 			</div>
 		</div>
 		<div class="simple-nav">
-			<a name="comment" style="display:none;"></a>
 			{% if page.next %}
 			<a title="新一篇：{{ page.next.title }}" href="{{ site.baseurl }}{{ page.next.url }}">&lt;</a>
 			{% else %}
@@ -46,6 +45,7 @@
 			{% else %}
 			<span>&gt;</span>
 			{% endif %}
+			<a name="comment" style="visibility:hidden;"></a>
 		</div>
 		<div class="comment">
 			<div id="uyan_frame"></div>
