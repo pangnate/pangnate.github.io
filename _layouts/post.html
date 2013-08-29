@@ -32,12 +32,12 @@
 			{% if page.next %}
 			<a title="新一篇：{{ page.next.title }}" href="{{ site.baseurl }}{{ page.next.url }}">&lt;</a>
 			{% else %}
-			<span>&gt;</span>
+			<span>&lt;</span>
 			{% endif %}
 			{% if page.previous %}
 			<a title="旧一篇：{{ page.previous.title }}" href="{{ site.baseurl }}{{ page.previous.url }}">&gt;</a>
 			{% else %}
-			<span>&lt;</span>
+			<span>&gt;</span>
 			{% endif %}
 		</div>
 		<div class="comment">
