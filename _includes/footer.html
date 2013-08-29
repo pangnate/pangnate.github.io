@@ -1,9 +1,11 @@
 <div class="wrapper g-footer">
 	<p>Copyright 2013. All right reserved. Converted by Jekyll.</p>
 </div>
+<script type="text/javascript" src="{{ site.baseurl }}/js/jquery.js"></script>
 <script type="text/javascript">
-	var uyan_config = {
+	var uyan_config = uyan_config || {};
+	uyan_config = $.extend(uyan_config, {
 		'du':'pangnate.com'
-	};
+	});
 </script>
 <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=95170"></script>
