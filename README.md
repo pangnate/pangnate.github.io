@@ -5,7 +5,7 @@ It is automatically transformed by Jekyll into a static site whenever I push thi
 The following directories and their contents are Copyright Corey Donohoe. You may not reuse anything therein without my permission:
 
 + _posts/
-+ images/
++ uploads/
 
 All other directories and files are [MIT](http://en.wikipedia.org/wiki/MIT_License) Licensed.
 
@@ -19,6 +19,6 @@ All other directories and files are [MIT](http://en.wikipedia.org/wiki/MIT_Licen
 以下目录在未经许可的情况下，您不能使用其中的任何内容。
 
 + _posts/
-+ images/
++ uploads/
 
 其他目录和文件遵守[MIT](http://zh.wikipedia.org/wiki/MIT_License)许可协议。
