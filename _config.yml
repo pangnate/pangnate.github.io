@@ -1,5 +1,8 @@
 baseurl: "http://pangnate.com"
 permalink: "/:year/:month/:day/:title"
+paginate: 2
 paginate_path: "/page/:num"
+asset_path: "/asset"
+uploads_path: "/uploads"
 timezone: "Asia/Shanghai"
 author: '<a href="javascript:void(0);">胖纳特</a>'

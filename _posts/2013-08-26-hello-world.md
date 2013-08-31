@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 欢迎使用 MarkdownPad 2
-categories: [Markdown, "中文分类"]
+categories: [教程]
 tags: [jekyll, github, git, markdown]
 excerpt: '## 欢迎使用 MarkdownPad 2 ##'
 cover : '/images/ku-bigpic.jpg'
