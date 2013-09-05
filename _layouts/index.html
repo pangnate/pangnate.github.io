@@ -56,37 +56,30 @@
 			</li>
 			{% endfor %}
 		</ol>
+
+		<!-- Pagination links -->
+		<div class="simple-nav">
+			{% if paginator.previous_page %}
+			{% if paginator.previous_page == 1 %}
+			<a href="/">&lt;</a>
+			{% else %}
+			<a href="/page/{{ paginator.previous_page }}" class="previous">&lt;</a>
+			{% endif %}
+			{% else %}
+			<span>&lt;</span>
+			{% endif %}
+			{% if paginator.next_page %}
+			<a href="/page/{{ paginator.next_page }}">&gt;</a>
+			{% else %}
+			<span&gt;</span>
+			{% endif %}
+		</div>
+
 	</div>
 	{% include sidebar.html %}
 </div>
 
-<!-- Pagination links -->
-<div class="pagination">
-	{% if paginator.previous_page %}
-		{% if paginator.previous_page == 1 %}
-		<a href="/" class="previous">Previous</a>
-		{% else %}
-		<a href="/page/{{ paginator.previous_page }}" class="previous">Previous</a>
-		{% endif %}
-	{% else %}
-	<span class="previous">Previous</span>
-	{% endif %}
-	<span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-	{% if paginator.next_page %}
-	<a href="/page/{{ paginator.next_page }}" class="next">Next</a>
-	{% else %}
-	<span class="next ">Next</span>
-	{% endif %}
-</div>
-
 {% include footer.html %}
-<hr><xmp>
-{{ site.categories }}</xmp>
-<hr>
-<xmp>
-{{ site.tags }}
-</xmp>
-<hr>
 
 </body>
 </html>
