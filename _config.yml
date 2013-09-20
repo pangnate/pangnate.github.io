@@ -1,4 +1,4 @@
-baseurl: "http://pangnate.com"
+url: "http://pangnate.com"
 permalink: "/:year/:month/:day/:title"
 paginate: 2
 paginate_path: "/page/:num"
