@@ -18,17 +18,8 @@
 				<h1 class="entry-title">{{ page.title }}</h1>
 				<div class="entry-meta">
 					<span class="author">By {{ site.author }}</span>
-					{% if page.categories.size > 0 %}
-					<span class="category">
-						in:
-						{% for category in page.categories %}
-						<a href="{{ site.url }}/category/{{ category }}">{{ category }}</a>
-						{% endfor %}
-					</span>
-					{% endif %}
-					<span class="sep"></span>
 					<span class="date">{{ page.date | date: "%b %d, &nbsp;%Y" }}</span>
-					<span class="comment"><a href="{{ site.url }}{{ page.url }}/#disqus_thread" title="Comment on {{ page.title }}">0 Comments</a></span>
+					<span class="sep"></span>
 				</div>
 				<div class="post-content" id="post">
 					{{ page.content | markdownify }}
@@ -37,8 +28,6 @@
 				<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 				<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 			</div>
-
-			{% include nav.html %}
 
 		</div>
 	</div>

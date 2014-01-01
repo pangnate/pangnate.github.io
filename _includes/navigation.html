@@ -32,10 +32,9 @@
 		<div class="widget">
 			<h3 class="widget-title">Link</h3>
 			<ul>
-				<li><a href="#">June 2013</a></li>
-				<li><a href="#">Delicious</a></li>
-				<li><a href="#">Freelancing</a></li>
-				<li><a href="#">Photography</a></li>
+				{% for link in site.data.links %}
+				<li><a target="_blank" href="{{ link.url }}">{{ link.title }}</a></li>
+				{% endfor %}
 			</ul>
 		</div>
 	</div>
