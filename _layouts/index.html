@@ -11,13 +11,14 @@
 
 <div class="container">
 	{% include navigation.html %}
-	
+
 	<div class="main">
 		<div class="container">
-			<ul class="post-list">
+			<div class="post-list">
 				{% for post in paginator.posts %}
-				<li>
+				<div class="post">
 					<h2 class="entry-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
+
 					<div class="entry-meta">
 						<span class="author">
 							By {{ site.author }}
@@ -32,7 +33,8 @@
 						{% endif %}
 						<span class="sep"></span>
 						<span class="date">{{ post.date | date: "%b %d, &nbsp;%Y" }}</span>
-						<span class="comment"><a href="{{ site.url }}{{ post.url }}/#disqus_thread" title="Comment on {{ post.title }}">0 Comments</a></span>
+						<span class="comment"><a href="{{ site.url }}{{ post.url }}/#disqus_thread"
+												 title="Comment on {{ post.title }}">0 Comments</a></span>
 					</div>
 					{% if post.cover %}
 					<div class="entry-thumbnail">
@@ -45,15 +47,38 @@
 					{% endif %}
 					<div class="post-content">
 						<p>
-							{{ page.excerpt | strip_html }}
+							{{ post.excerpt | strip_html | newline_to_br }}
 						</p>
 						<a href="{{ site.url }}{{ post.url }}" class="more-link">Continue reading</a>
 					</div>
-				</li>
+				</div>
 				{% endfor %}
-			</ul>
+			</div>
 
 		</div>
+
+		<div class="nav clearfix">
+			<div class="nav-previous">
+				<span>
+					{% if paginator.previous_page == 1 %}
+					<a href="{{ paginator.previous_page_path }}" class="arr">&lt;</a>
+					<em class="pager-title"><a href="/">Previous</a></em>
+					{% else %}
+					<a href="{{ paginator.previous_page_path }}" class="arr">&lt;</a>
+					<em class="pager-title"><a href="{{ paginator.previous_page_path }}">Previous</a></em>
+					{% endif %}
+				</span>
+			</div>
+			<div class="nav-next">
+				<span>
+					{% if paginator.next_page %}
+					<a href="{{ paginator.next_page_path }}" class="arr">&gt;</a>
+					<em class="pager-title"><a href="{{ paginator.next_page_path }}">Next</a></em>
+					{% endif %}
+				</span>
+			</div>
+		</div>
+
 	</div>
 
 	{% include widget.html %}
@@ -67,7 +92,8 @@
 
 	/* * * DON'T EDIT BELOW THIS LINE * * */
 	(function () {
-		var s = document.createElement('script'); s.async = true;
+		var s = document.createElement('script');
+		s.async = true;
 		s.type = 'text/javascript';
 		s.src = '//' + disqus_shortname + '.disqus.com/count.js';
 		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
