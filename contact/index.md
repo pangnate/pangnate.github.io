@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  关于我
+title:  联系我
 comment: false
 ---
 
