@@ -45,7 +45,7 @@
 					{% endif %}
 					<div class="post-content">
 						<p>
-							{{ post.excerpt }}
+							{{ page.excerpt | strip_html }}
 						</p>
 						<a href="{{ site.url }}{{ post.url }}" class="more-link">Continue reading</a>
 					</div>
