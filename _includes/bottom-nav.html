@@ -1,8 +1,10 @@
 <div class="nav clearfix">
 	<div class="nav-previous">
 		<span>
-			<a href="#" class="arr">&lt;</a>
-			<em class="pager-title"><a href="#">薛蛮子自述微博成名路：做大V感觉像皇上薛蛮子自述微博成名路：做大V感觉像皇上</a></em>
+			{% if page.next %}
+			<a href="{{ site.baseurl }}{{ page.next.url }}" class="arr">&lt;</a>
+			<em class="pager-title"><a href="{{ site.baseurl }}{{ page.next.url }}">{{ page.next.title }}</a></em>
+			{% else %}
 		</span>
 	</div>
 	<div class="nav-next">

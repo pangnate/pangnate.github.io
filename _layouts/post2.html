@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>{{ page.title }}</title>
+	{% include res.html %}
+</head>
+<body>
+
+<div class="container">
+	{% include navigation.html %}
+
+	<div class="main">
+		<div class="post-wrapper">
+			<h1>{{ page.title }}</h1>
+			<div class="base-info">
+				<span class="author">By: <strong>{{ site.author }}</strong></span>
+				{% if page.categories.size > 0 %}
+				<span class="category">
+					Category:
+					{% for category in page.categories %}
+					<a href="{{ site.baseurl }}/category/{{ category }}">{{ category }}</a>
+					{% endfor %}
+				</span>
+				{% endif %}
+				<span class="post-date">Date: {{ page.date | date: "%Y/%m/%d" }}</span>
+			</div>
+			<div class="post-content" id="post">
+				{{ page.content | markdownify }}
+			</div>
+		</div>
+		<div class="simple-nav">
+			{% if page.next %}
+			<a title="新一篇：{{ page.next.title }}" href="{{ site.baseurl }}{{ page.next.url }}">&lt;</a>
+			{% else %}
+			<span>&lt;</span>
+			{% endif %}
+			{% if page.previous %}
+			<a title="旧一篇：{{ page.previous.title }}" href="{{ site.baseurl }}{{ page.previous.url }}">&gt;</a>
+			{% else %}
+			<span>&gt;</span>
+			{% endif %}
+		</div>
+		<div class="comment">
+			<div id="uyan_frame"></div>
+		</div>
+	</div>
+	{% include sidebar.html %}
+</div>
+
+{% include widget.html %}
+</div>
+{% include footer.html %}
+{% include toolbar.html %}
+
+<script type="text/javascript">
+	$(function(){
+		window.onload = function(){
+			var hash = location.hash;
+			if(hash=="#comment"){
+				setTimeout(function(){
+					var sTop = $("#uyan_frame").offset().top - 80;
+					$("html, body").animate({
+						scrollTop : sTop
+					});
+				}, 1000);
+			}
+		};
+	});
+</script>
+</body>
+</html>
