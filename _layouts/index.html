@@ -45,7 +45,7 @@
 					{% endif %}
 					<div class="post-content">
 						<p>
-							{{ post.excerpt | strip_html }}
+							{{ post.excerpt | markdownify }}
 						</p>
 						<a href="{{ site.url }}{{ post.url }}" class="more-link">Continue reading</a>
 					</div>
