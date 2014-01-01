@@ -6,3 +6,4 @@ asset_path: "/asset"
 uploads_path: "/uploads"
 timezone: "Asia/Shanghai"
 author: '<a href="http://weibo.com/pangnate" target="_blank" rel="nofollow">pangnate</a>'
+excerpt_separator: <!--more-->

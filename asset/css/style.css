@@ -171,10 +171,12 @@ table {
 .widget-title, .widget ul.menu li{font-weight:bold;text-transform:uppercase;}
 .widget ul.menu li a{display: block;}
 .widget ul li{line-height:20px;margin-top:10px;}
+.widget ul.small-list{margin-top:5px;}
+.widget ul.small-list li{margin-top:5px;}
 
 
-.post-list li{margin-bottom: 80px;padding-top:60px;border-top:1px solid #E5E5E5;}
-.post-list li:first-child{padding-top: 0;border-top:0;}
+.post-list .post{margin-bottom: 80px;padding-top:60px;border-top:1px solid #E5E5E5;}
+.post-list .post:first-child{padding-top: 0;border-top:0;}
 .entry-title{margin:-5px 0 12px;line-height:1.3;font-family:'Roboto Slab',"Microsoft YaHei";font-weight:normal;font-size: 30px;text-rendering:optimizelegibility;}
 .entry-meta{margin-bottom:40px;color:#AAA;}
 .entry-meta .sep{border-top: 1px solid #ECECEC;display: block;margin: 15px 0 10px 0;}
@@ -237,7 +239,7 @@ table {
 	.post-list .entry-title{font-size:24px;}
 	.post-list .entry-meta{margin-bottom:20px;}
 	.entry-thumbnail{margin-bottom:20px;}
-	.post-list li{margin-bottom:50px;padding-top:40px;}
+	.post-list .post{margin-bottom:50px;padding-top:40px;}
 	.post-list .more-link{margin-top: 15px;}
 	.footer{margin-left:20px;margin-right:20px;}
 	.nav span.nav-next a{max-width:80%;}

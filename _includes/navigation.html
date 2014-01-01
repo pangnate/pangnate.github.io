@@ -13,25 +13,18 @@
 		</div>
 		<div class="widget">
 			<h3 class="widget-title">Categories</h3>
-			<ul>
-				<li><a href="#">Creativity</a></li>
-				<li><a href="#">Delicious</a></li>
-				<li><a href="#">Freelancing</a></li>
-				<li><a href="#">Photography</a></li>
+			<ul class="small-list">
+				{% for cat in site.categories %}
+				<li><a href="#{{ cat[0] }}">{{ cat[0] }}</a></li>
+				{% endfor %}
 			</ul>
 		</div>
-		<div class="widget">
+		<div class="widget" style="display:none;">
 			<h3 class="widget-title">Archives</h3>
-			<ul>
-				<li><a href="#">June 2013</a></li>
-				<li><a href="#">Delicious</a></li>
-				<li><a href="#">Freelancing</a></li>
-				<li><a href="#">Photography</a></li>
-			</ul>
 		</div>
 		<div class="widget">
 			<h3 class="widget-title">Link</h3>
-			<ul>
+			<ul class="small-list">
 				{% for link in site.data.links %}
 				<li><a target="_blank" href="{{ link.url }}">{{ link.title }}</a></li>
 				{% endfor %}
