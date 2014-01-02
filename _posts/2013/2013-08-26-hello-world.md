@@ -3,17 +3,16 @@ layout: post
 title: 欢迎使用 MarkdownPad 2
 categories: [教程]
 tags: [jekyll, github, git, markdown]
-excerpt: '## 欢迎使用 MarkdownPad 2 ##'
-cover : '/images/ku-bigpic.jpg'
+cover : '/uploads/images/ku-bigpic.jpg'
 ---
-## 欢迎使用 MarkdownPad 2 ##
+### 欢迎使用 MarkdownPad 2
 
 **MarkdownPad** 是 Windows 平台上一个功能完善的 Markdown 编辑器。
 
 ### 专为 Markdown 打造 ###
 
 提供了语法高亮和方便的快捷键功能，给您最好的 Markdown 编写体验。
-
+<!--more-->
 来试一下：
 
 - **粗体** (`Ctrl+B`) and *斜体* (`Ctrl+I`)

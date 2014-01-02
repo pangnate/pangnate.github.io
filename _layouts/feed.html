@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<rss version="2.0">
+	<channel>
+		<title>{{ site.title }}</title>
+		<link>{{ site.url }}</link>
+		<webMaster>voteon@qq.com (pangnate)</webMaster>
+		<pubDate>{{ site.time | date_to_rfc822}}</pubDate>
+		<lastBuildDate>{{ site.time | date_to_rfc822}}</lastBuildDate>
+		{% for post in site.posts limit:30 %}
+		<item>
+			<title>{{ post.title }}</title>
+			<link>{{ site.url }}{{ post.url }}/</link>
+			<description>{{ post.excerpt | strip_html | strip_newlines }}</description>
+			<author>pangnate</author>
+			<category>{% for category in post.categories %}{{ category }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}</category>
+			<comments>{{ site.url }}{{ post.url }}/#disqus_thread</comments>
+			<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+		</item>
+		{% endfor %}
+	</channel>
+</rss>

@@ -56,10 +56,7 @@
 			<div class="nav clearfix">
 				<div class="nav-previous">
 					<span>
-						{% if paginator.previous_page == 1 %}
-						<a href="{{ paginator.previous_page_path }}" class="arr">&lt;</a>
-						<em class="pager-title"><a href="/">Previous</a></em>
-						{% else %}
+						{% if paginator.previous_page >= 1 %}
 						<a href="{{ paginator.previous_page_path }}" class="arr">&lt;</a>
 						<em class="pager-title"><a href="{{ paginator.previous_page_path }}">Previous</a></em>
 						{% endif %}
