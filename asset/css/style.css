@@ -190,7 +190,7 @@ table {
 .post-content{font-family:'Roboto Slab',Arial,"Microsoft YaHei";font-size: 14px;line-height: 25px;}
 .post-wrapper .post-content{padding-bottom:40px;}
 .post-content p{margin: 0 0 12.5px;}
-.nav{margin:0 0 60px 20px;border-top:1px solid #ECECEC;border-bottom:1px solid #ECECEC;}
+.nav{margin:0 0 60px 0;border-top:1px solid #ECECEC;border-bottom:1px solid #ECECEC;}
 .nav .nav-previous, .nav .nav-next{
 	display:block;float:left;width:50%;height:100px;text-align: left;
 }
