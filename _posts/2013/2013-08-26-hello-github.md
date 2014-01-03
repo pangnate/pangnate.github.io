@@ -7,4 +7,4 @@ title: Hello Github
 tags: [github, jekyll, markdown]
 ---
 
-Hello, this is my first post in github. Thank him for providing such a good tool.
+Hello, this is my first post in github. Thank Github for providing such a good tool.
