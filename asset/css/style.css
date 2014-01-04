@@ -150,7 +150,7 @@ table {
 	background: #222;
 }
 .sidebar a{display:inline-block;float: left;width:40px;height:40px;border-bottom: 1px solid #333;}
-.sidebar a em{display:block;width:40px;height:40px;background:url(images/icon.png?v={{ site.time | md5 | truncatewords: 8 }});opacity:.4;filter:alpha(opacity=40);cursor:pointer;}
+.sidebar a em{display:block;width:40px;height:40px;background:url(images/icon.png?v=2014010402);opacity:.4;filter:alpha(opacity=40);cursor:pointer;}
 .sidebar a:hover{background: #111;}
 .sidebar a:hover em{opacity:1;filter:alpha(opacity=100);transition: all 0.6s ease 0s;}
 .sidebar a#back_top{position:absolute;bottom:0;left:0;border-top: 1px solid #333;}
