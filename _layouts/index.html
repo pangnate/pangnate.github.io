@@ -14,7 +14,7 @@
 			<div class="post-list">
 				{% for post in paginator.posts %}
 				<div class="post">
-					<h2 class="entry-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
+					<h2 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
 					<div class="entry-meta">
 						<span class="author">
@@ -24,13 +24,13 @@
 						<span class="category">
 							in
 							{% for category in post.categories %}
-							<a href="{{ site.url }}/category/#{{ category }}">{{ category }}</a>{% if forloop.last %}{% else %}, {% endif %}
+							<a href="/category/#{{ category }}">{{ category }}</a>{% if forloop.last %}{% else %}, {% endif %}
 							{% endfor %}
 						</span>
 						{% endif %}
 						<span class="sep"></span>
 						<span class="date">{{ post.date | date: "%b %d, &nbsp;%Y" }}</span>
-						<span class="comment"><a href="{{ site.url }}{{ post.url }}/#disqus_thread"
+						<span class="comment"><a href="{{ post.url }}/#disqus_thread"
 												 title="Comment on {{ post.title }}">0 Comments</a></span>
 					</div>
 					{% if post.cover %}
@@ -38,7 +38,7 @@
 						{% if post.cover contains "http://" or post.cover contains "https://" %}
 						<img src="{{ post.cover }}" alt="">
 						{% else %}
-						<img src="{{ site.url }}{{ post.cover }}" alt="">
+						<img src="{{ post.cover }}" alt="">
 						{% endif %}
 					</div>
 					{% endif %}
@@ -46,7 +46,7 @@
 						<p>
 							{{ post.excerpt | strip_html | newline_to_br }}
 						</p>
-						<a href="{{ site.url }}{{ post.url }}" class="more-link">Continue reading</a>
+						<a href="{{ post.url }}" class="more-link">Continue reading</a>
 					</div>
 				</div>
 				{% endfor %}
