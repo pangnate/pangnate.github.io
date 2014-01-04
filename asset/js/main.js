@@ -9,6 +9,7 @@ var ui = (function($){
 				return false;
 			}
 			$("html, body").animate({scrollTop:0});
+			$(this).blur();
 		});
 	};
 	
@@ -39,6 +40,7 @@ var ui = (function($){
 			} else {
 				close();
 			}
+			$(this).blur();
 		});
 
 		$(window).resize(function(){
