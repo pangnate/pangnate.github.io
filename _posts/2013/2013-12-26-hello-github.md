@@ -7,4 +7,4 @@ categories: [未分类]
 # tags: [github, jekyll, markdown]
 ---
 
-Hello, this is my first post in github. Thank Github for providing such a good tool.
+这是我在 GitHub 的第一篇文章，感谢他提供了这么好的一个平台。
