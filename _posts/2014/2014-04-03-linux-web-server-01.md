@@ -38,6 +38,8 @@ tags: [linux, centos, nginx]
  
 可以看见ip地址已经改变为刚才设置的地址。  
 
+<!--more-->
+
 ### 2. 关闭SELinux    
 
 SELinux 是linux的访问控制体系，有些时候安装软件会被阻止，所以我们一般直接把他关闭掉。
