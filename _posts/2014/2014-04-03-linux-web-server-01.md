@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linux服务器系列：系统的安装与基本环境配置
+title: Linux系列：系统的安装与基本环境配置
 categories: [服务器]
 # cover : ''
 # excerpt: ''
